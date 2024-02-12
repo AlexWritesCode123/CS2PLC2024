@@ -54,6 +54,32 @@ public class ErrorsEnum
         return result;
     }
 
+    // private static result2error (Result r) {
+        //Error e = null
+
+        //switch (r) {
+            //case A_BIT_DIFFERENT:
+            //e = Error.FP_ROUNDING;
+            //break;
+
+            //case INFINITY:
+            //e = Error.FP_OVERFLOW;
+            //break
+
+            //case ZERO:
+            //e = Error.FP_UNDERFLOW;
+            //break
+
+            //case VERY_DIIFFERENT:
+            //e = Error.INT_OVERFLOW
+            //break
+
+
+        }
+
+
+    }
+
     public static void main(String[] args)
     {
         System.out.print("Known errors = ");

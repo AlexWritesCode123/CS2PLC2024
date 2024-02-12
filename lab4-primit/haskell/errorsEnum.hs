@@ -8,6 +8,10 @@ main =
     putStrLn ("known errors = " ++ show allErrors)
     error <- getElement "error"
     putStrLn (show error ++ " results in: " ++ show (error2Result error))
+    --putStrLn ("results = " ++ show allResults)
+    --result <- getElement "result"
+    --putStrLn (show result ++ "errors in: " ++show (Result2error error))
+
     
 initialiseIO =
     do
@@ -30,10 +34,20 @@ data Result = Zero | Infinity | ABitDifferent | VeryDifferent
 allErrors :: [Error] -- ie it is a list of PL elements
 allErrors = [minBound .. maxBound]
 
+--allResults :: [Result]
+--allResults = [minBound .. maxBound]
+
+
 error2Result FP_Rounding = ABitDifferent
 error2Result FP_Overflow = Infinity
 error2Result FP_Underflow = Zero
 error2Result Int_Overflow = VeryDifferent
+
+--Result2error ABitDifferent = FP_Rounding
+--Result2error Infinity = FP_Overflow
+--Result2error Zero = FP_Underflow
+--Result2error VeryDifferent = Int_Overflow
+
 
 -- The code below should not be changed and does not need to be fully understood.
 
